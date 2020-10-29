@@ -6,28 +6,23 @@ package doppelkeks;
 import java.util.Arrays;
 
 public class App {
-    public static String convertIntegerToString(int value, int basis, String alphabet) {
+    public static String convertIntegerToString(int value, String alphabet) {
         return "";
     }
 
-    public static int convertStringToInteger(String value, int basis, String alphabet) {
+    public static int convertStringToInteger(String value, String alphabet) {
         return 0;
     }
 
     public static void main(String[] args) {
         // Read command line arguments or supply default values
         String value = args.length > 0 ? args[0] : "1111";
-        String inBasis = args.length > 1 ? args[1] : "10";
-        String outBasis = args.length > 2 ? args[2] : "16";
-        String alphabet = args.length > 3 ? args[3] : "0123456789ABCDEF";
-
-        // Convert basises in cli-arg from decimal to integer
-        int inBasisAsInt = App.convertStringToInteger(inBasis, 10, "0123456789");
-        int outBasisAsInt = App.convertStringToInteger(outBasis, 10, "0123456789");
+        String inAlphabet = args.length > 1 ? args[1] : "0123456789";
+        String outAlphabet = args.length > 2 ? args[2] : "0123456789ABCDEF";
 
         // Convert value to integer and back to string, using the given basises
-        int temp = App.convertStringToInteger(value, inBasisAsInt, alphabet);
-        String result = App.convertIntegerToString(temp, App.convertStringToInteger(outBasis, 10, alphabet), alphabet);
+        int temp = App.convertStringToInteger(value, inAlphabet);
+        String result = App.convertIntegerToString(temp, outAlphabet);
 
         // Print and exit
         System.out.println(result);
