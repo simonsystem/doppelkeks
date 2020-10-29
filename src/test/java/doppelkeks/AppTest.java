@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test public void testAppCanConvertStringToInteger() {
-        assertEquals(1111, App.convertStringToInteger("1111", 10, "0123456789"), "app should convet string to integer");
+        assertEquals(1111, App.convertStringToInteger("1111", 10, "0123456789"), "app should convert string to integer");
     }
     @Test public void testAppCanConvertIntegerToString() {
         assertEquals("1234", App.convertIntegerToString(1234, 10, "0123456789"), "app should convert integer to string");
