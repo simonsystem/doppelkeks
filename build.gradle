@@ -33,7 +33,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClassName = 'doppelkeks.App'
+    mainClassName = 'de.simonsystem.doppelkeks.Doppelkeks'
 }
 
 test {
